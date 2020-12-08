@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FBFBFB"
+            tools:context=".ui.bangundatar.BangunDatarActivity">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/leftarrow"/>
+
+            <ImageView
+                android:id="@+id/top"
+                android:layout_width="150dp"
+                android:layout_height="53dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/top"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_hero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/top"
+                android:layout_alignEnd="@+id/top"
+                android:layout_alignBottom="@+id/top"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="MENU"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/back"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="serif"
+                android:text="Bangun Datar"
+                android:textColor="@android:color/black"
+                android:textSize="34sp" />
+
+<!--            <com.mancj.materialsearchbar.MaterialSearchBar-->
+<!--                android:id="@+id/search_bar"-->
+<!--                style="@style/MaterialSearchBarLight"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_below="@+id/tv_judul"-->
+<!--                android:layout_marginHorizontal="24dp"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_marginBottom="4dp"-->
+<!--                app:mt_hint="Custom hint"-->
+<!--                app:mt_maxSuggestionsCount="5"-->
+<!--                app:mt_placeholder="Custom placeholder"-->
+<!--                app:mt_speechMode="true" />-->
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_bangun_datar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_judul"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="3dp"
+                tools:listitem="@layout/item_bangun_datar" />
+        </RelativeLayout>
+    </ScrollView>
+</layout>

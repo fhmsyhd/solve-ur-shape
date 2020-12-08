@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.bangundatar.BangunDatarDetailActivity">
+
+            <ImageView
+                android:id="@+id/backDetail"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/leftarrow"/>
+
+            <ImageView
+                android:id="@+id/topDetail"
+                android:layout_width="220dp"
+                android:layout_height="53dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/top"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/judulDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/topDetail"
+                android:layout_alignEnd="@+id/topDetail"
+                android:layout_alignBottom="@+id/topDetail"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="Persegi"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"/>
+
+            <ImageView
+                android:id="@+id/gambarDetail"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/topDetail"
+                android:layout_marginTop="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/kotak"/>
+
+            <TextView
+                android:id="@+id/descriptionDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gambarDetail"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Persegi adalah bangun datar dua dimensi yang dibentuk oleh empat buah rusuk yang sama panjang dan memiliki empat buah sudut yang kesemuanya adalah sudut siku-siku. Bangun ini disebut juga sebagai bujur sangkar"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/rumusDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descriptionDetail"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Rumus :"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tv_keliling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rumusDetail"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Keliling :"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/kelilingDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rumusDetail"
+                android:layout_toRightOf="@+id/tv_keliling"
+                android:layout_marginStart="-5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="S x S x S x S"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_luas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kelilingDetail"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Luas :"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/luasDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kelilingDetail"
+                android:layout_toRightOf="@+id/tv_luas"
+                android:layout_marginStart="-5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="S x S"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/btn_hitung"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_margin="12dp"-->
+<!--                android:layout_below="@+id/luasDetail"-->
+<!--                app:cardCornerRadius="12dp"-->
+<!--                app:cardElevation="6dp"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                tools:targetApi="lollipop">-->
+<!--                -->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="vertical">-->
+<!--                    -->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="sans-serif-condensed-medium"-->
+<!--                        android:text="HITUNG"-->
+<!--                        android:textColor="@android:color/black"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:gravity="center"/>-->
+<!--                    -->
+<!--                </LinearLayout>-->
+
+
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+            <Button
+                android:id="@+id/btn_hitung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_below="@+id/luasDetail"
+                android:text="HITUNG" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>
